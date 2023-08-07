@@ -1,0 +1,274 @@
+/* formatação geral */
+
+:root {
+    --azulPrincipal: #11468F;
+    --azulPrincipalDarker: #0e3469;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+
+body {
+    background: linear-gradient(to bottom, var(--azulPrincipal), #05152b);
+}
+
+ol {  
+    list-style-type: none;   
+}  
+
+ul {  
+    list-style-type: none;  
+}
+
+/* header */
+header {
+    background: var(--azulPrincipal);
+    min-height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+
+#titulo-header {
+    font-size: 30px;
+    color: white;
+    margin-left: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#subtitulo-header {
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 60%;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+
+/* principal */
+#principal {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+/* menu */
+#menu {
+    width: 17%;
+    min-width: 130px;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #ffffff, #a5a5a5);
+}
+
+#titulo-menu {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    color: var(--azulPrincipal);
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    color: var(--azulPrincipal);
+
+    border: 2px solid var(--azulPrincipal);
+    border-radius: 5px;
+    margin: 10px 10px 10px 10px;
+    padding: 8px;
+
+    width: 100%;
+}
+
+#menu ul li a:hover {
+    color: white;
+    font-size: 18px;
+    background: var(--azulPrincipal);
+}
+
+.menu-selecionado {
+    color: white !important; 
+    font-size: 18px !important;
+    background: var(--azulPrincipal);
+}
+
+#menu ul li {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* conteudo principal */
+.box-padrao {
+    width: 60%;
+    min-height: 20px;
+
+    margin-top: 3px;
+    padding: 10px;
+
+    border-left: 2px solid var(--azulPrincipal);
+	border-right: 2px solid var(--azulPrincipal);
+	border-top: 1px solid var(--azulPrincipal);
+	border-bottom: 4px solid var(--azulPrincipal);
+	border-radius: 10px;
+}
+
+.conteudo-normal {
+    width: 81.1%;
+    background: linear-gradient(to bottom, #ffffff, #c9c9c9);
+
+    margin-left: 4px;
+
+    padding-top: 20px;
+    padding-left: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:flex-start;
+}
+
+
+/* ================= tags padronizadas ================= */
+
+.hidden {
+    display: none;
+}
+
+/* estilo para botoes */
+button {
+    background-color: var(--azulPrincipal);
+
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+
+    color: white;
+
+    border: 2px solid var(--azulPrincipal);
+    border-radius: 5px;
+
+    min-width: 120px;
+    padding: 8px 30px 8px 30px;
+}
+
+button:hover {
+    background-color: white;
+    color: var(--azulPrincipal);
+
+}
+
+button:active {
+    background-color: rgb(212, 212, 212);
+    color: var(--azulPrincipalDarker);
+
+}
+
+
+/* estilo para labels */
+label {
+    font-size: large;
+
+}
+
+/* estilo para inputs */
+input[type=text] {
+
+    margin-top: 3px;
+    padding: 5px;
+
+    border-left: 2px solid var(--azulPrincipal);
+	border-right: 2px solid var(--azulPrincipal);
+	border-top: 1px solid var(--azulPrincipal);
+	border-bottom: 3px solid var(--azulPrincipal);
+	border-radius: 6px;
+
+}
+
+input[type=date] {
+
+    margin-top: 3px;
+    padding: 5px;
+
+    border-left: 2px solid var(--azulPrincipal);
+	border-right: 2px solid var(--azulPrincipal);
+	border-top: 1px solid var(--azulPrincipal);
+	border-bottom: 3px solid var(--azulPrincipal);
+	border-radius: 6px;
+
+}
+
+input[type=month] {
+
+    margin-top: 3px;
+    padding: 5px;
+
+    border-left: 2px solid var(--azulPrincipal);
+	border-right: 2px solid var(--azulPrincipal);
+	border-top: 1px solid var(--azulPrincipal);
+	border-bottom: 3px solid var(--azulPrincipal);
+	border-radius: 6px;
+
+}
+
+
+
+input[type=number] {
+
+    margin-top: 3px;
+    padding: 5px;
+
+    border-left: 2px solid var(--azulPrincipal);
+	border-right: 2px solid var(--azulPrincipal);
+	border-top: 1px solid var(--azulPrincipal);
+	border-bottom: 3px solid var(--azulPrincipal);
+	border-radius: 6px;
+
+}
+
+textarea {
+    margin-top: 3px;
+    padding: 10px;
+
+    border-left: 2px solid var(--azulPrincipal);
+	border-right: 2px solid var(--azulPrincipal);
+	border-top: 1px solid var(--azulPrincipal);
+	border-bottom: 3px solid var(--azulPrincipal);
+	border-radius: 6px;
+
+    font-size: 18px;
+}
+
+/* estilo para tabelas */
+table {
+    width:54%;
+    border:1px solid #404040;
+    border-collapse:collapse;
+    padding:5px;
+    border-radius: 10px;
+}
+table th {
+    border:1px solid #000000;
+    padding:5px;
+    background: var(--azulPrincipal);
+    color: #ffffff;
+}
+table td {
+    border:1px solid #404040;
+    text-align:center;
+    padding:5px;
+    background: #f5f5f5;
+    color: #000000;
+}

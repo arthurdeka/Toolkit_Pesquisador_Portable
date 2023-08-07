@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+
+        <title>Index</title>
+        <meta charset="utf-8">
+
+        <!--Normalize-->
+        <link rel="stylesheet" type="mime" href="normalize.css">
+
+        <!--Style sheet-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!--Style adicional -->
+        <link rel="stylesheet" type="text/css" href="style-adicional.css">
+        
+
+    </head>
+
+    
+    <body>
+
+        <header>
+            <h5 id="titulo-header">Toolkit do Pesquisador</h1>
+            <h6 id="subtitulo-header">Ferramentas & Aplicações</h2>
+        </header>
+
+        <div id="principal">
+
+            <aside id="menu">
+                <h2 id="titulo-menu" align="center">Menu</h2>
+                <ul>
+                    <li><a class="menu-selecionado" href="contador-palavras.html">Contador de Palavras</a></li>
+                    <li><a href="gerar-referencias.html">Gerar Referências</a></li>
+                    <li><a href="normas-formatacao.html">Normas & Formatação</a></li>
+                    <li><a href="sobre.html">Sobre...</a></li>
+
+                    <br><br><br><br>
+                    
+                    <li><a href="index.html">Voltar a Página Inicial</a></li>
+
+                </ul>
+            </aside>
+
+            
+            <div class="conteudo-normal">
+
+
+                <script>
+                    
+                    function contarTexto() {
+                        let texto = (document.getElementById("contador_texto").value).toString()
+                        var TotaldeSegundos, contadorCaracteres, contador_caracteres_SemEspaços, texto_sem_espacos, totalDePalavras;
+                        
+                        //contar quantidade de palavras
+                        totalDePalavras = texto.trim();
+                        if (totalDePalavras == '') {
+                            totalDePalavras = '0'
+                        } else {
+                            totalDePalavras = totalDePalavras.split(/\s+/)
+                            totalDePalavras = totalDePalavras.length
+                        }
+            
+                        //contar caracteres (com e sem espaços)
+                        contadorCaracteres = texto.length;
+                        texto_sem_espacos = (texto.replace(/\s/g, '')).length
+            
+                        //tempo de leitura
+                        TotaldeSegundos = Number.parseFloat(totalDePalavras) * 2.16;
+                        if (TotaldeSegundos > 59) {
+                            TotaldeSegundos = TotaldeSegundos / 60
+                            TotaldeSegundos = TotaldeSegundos.toFixed(0)
+                            TotaldeSegundos = `${TotaldeSegundos} Minutos.`
+                        } else {
+                            TotaldeSegundos = TotaldeSegundos.toFixed(0)
+                            TotaldeSegundos = `${TotaldeSegundos} Segundos.`
+                        }
+            
+                        //====== processamento para fazer a contagem das palavras: ===========
+            
+                        texto = texto.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase();
+                        // Separa as palavras em um array
+                        var palavras = texto.split(" ");
+                        // Cria um objeto para armazenar a contagem de cada palavra
+                        var contagem = {};
+                        // Conta a ocorrência de cada palavra
+                        palavras.forEach(function(palavra) {
+                            if (contagem[palavra]) {
+                            contagem[palavra]++;
+                            } else {
+                            contagem[palavra] = 1;
+                            }
+                        });
+                        // Converte o objeto em um array de pares [palavra, contagem]
+                        var palavrasContagem = Object.entries(contagem);
+                        // Ordena o array com base na contagem, em ordem decrescente
+                        palavrasContagem.sort(function(a, b) {
+                            return b[1] - a[1];
+                        });
+                        // Extrai apenas as palavras ordenadas em uma lista
+                        var palavrasMaisUtilizadas = palavrasContagem.map(function(par) {
+                            return par[0];
+                        });
+                        // Extrai apenas as contagens em uma lista
+                        var contagemPalavras = palavrasContagem.map(function(par) {
+                            return par[1];
+                        });
+                        
+                        //seta os valores nos campos
+                        const v_total_palavras = document.getElementById("valorTotalPalavras")
+                        const v_minutos = document.getElementById("valorMinutos")
+                        const v_com_espacos = document.getElementById("valorComEspacos")
+                        const v_sem_espacos = document.getElementById("valorSemEspacos")
+                        const v_tabela_items = document.getElementById("tabela_itens")
+            
+                        v_total_palavras.innerHTML = `${totalDePalavras} Palavras.`
+                        v_minutos.innerHTML = TotaldeSegundos
+                        v_com_espacos.innerHTML = `${contadorCaracteres} Caracteres.`
+                        v_sem_espacos.innerHTML = `${texto_sem_espacos} Caracteres.`
+            
+                        v_tabela_items.innerHTML = ''
+                        for (i=0;i<15;i++) {
+                            if (palavrasMaisUtilizadas[i].length > 2) {
+                                v_tabela_items.innerHTML += 
+                                `
+                                <tr>
+                                    <td>${palavrasMaisUtilizadas[i]}</td>
+                                    <td>${contagemPalavras[i]}</td>
+                                </tr>`
+                            }
+            
+                        }
+            
+                        //debug
+                        console.log(palavrasMaisUtilizadas);
+                        console.log(contagemPalavras);
+            
+                        console.log(totalDePalavras, contadorCaracteres, contador_caracteres_SemEspaços, TotaldeSegundos)
+                    }
+            
+                </script>
+            
+                <h1>Contador de Caracteres/Palavras</h1>
+                <p class="paragrafo-descritivo">
+                    Faz a contagem de caraceres, palavras, e quantas vezes cada palavra foi utilizada. Também calcula o tempo médio de leitura do texto.
+                </p>
+            
+                <br>
+            
+                <textarea id="contador_texto" cols="70" rows="10"></textarea>
+                <br>
+                
+                <button onclick="contarTexto()">Contar</button>
+                
+                <br><br>
+                
+                <div id="saida">
+                    <h3>Total de Palavras:</h2>
+                    <p id="valorTotalPalavras">0 Palavras.</p>
+                    
+                    <br>
+            
+                    <h3>Tempo Aproximado de Leitura:</h2>
+                    <p id="valorMinutos">0 Minutos.</p>
+            
+                    <br>
+            
+                    <h3 style="display: inline-block;">Total de Caracteres (com espaços):</h2>
+                    <p id="valorComEspacos" style="display: inline-block;">0 Caracteres.</p>
+                    <br>
+                    <h3 style="display: inline-block;">Total de Caracteres (sem espaços):</h2>
+                    <p id="valorSemEspacos" style="display: inline-block;">0 Caracteres.</p>
+            
+                    <br><br>
+                    
+                    <h3>Palavras mais utilizadas:</h2>
+                    
+                    <div id="tabelaContagem">
+            
+            
+            
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Palavras</th>
+                                    <th>Qtd</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela_itens">
+            
+                            </tbody>
+                        </table>
+            
+                    </div>
+                    
+                    <br><br>
+                        
+                </div>
+            
+                
+            </div>
+                
+
+        </div> 
+
+        <footer>
+        </footer>
+
+
+    </body>
+
+</html>
