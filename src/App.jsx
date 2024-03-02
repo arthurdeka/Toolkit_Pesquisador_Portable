@@ -18,12 +18,12 @@ function App() {
         <SideMenu />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/gerar-referencias" element={<GerarReferencias/>} />
-            <Route path="/contador-de-palavras" element={<ContadorDePalavras/>} />
-            <Route path="/normas-e-formatacao" element={<NormasEFormatacao/>} />
-            <Route path="/downloads" element={<Downloads/>} />
-            <Route path="/sobre" element={<Sobre/>} />
+            <Route path="/Toolkit_Pesquisador_Portable" element={<Homepage />} />
+            <Route path="/Toolkit_Pesquisador_Portable/gerar-referencias" element={<GerarReferencias/>} />
+            <Route path="/Toolkit_Pesquisador_Portable/contador-de-palavras" element={<ContadorDePalavras/>} />
+            <Route path="/Toolkit_Pesquisador_Portable/normas-e-formatacao" element={<NormasEFormatacao/>} />
+            <Route path="/Toolkit_Pesquisador_Portable/downloads" element={<Downloads/>} />
+            <Route path="/Toolkit_Pesquisador_Portable/sobre" element={<Sobre/>} />
           </Routes>
         </BrowserRouter>
       </div>
