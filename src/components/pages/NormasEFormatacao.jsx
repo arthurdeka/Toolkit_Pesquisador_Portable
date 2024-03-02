@@ -12,7 +12,7 @@ import ImgCitacoes2 from "../../images/normas_img/citacoes2.png";
 import ImgCitacoes3 from "../../images/normas_img/citacoes3.png";
 import ImgEspacamento from "../../images/normas_img/espacamento.png";
 import ImgFonte from "../../images/normas_img/fonte.png";
-import ImgItalico from "../../images/normas_img/italicoimg.png";
+import ImgItalicoo from "../../images/normas_img/italicoimg.png";
 import ImgMargem from "../../images/normas_img/margem.png";
 import ImgPaginacao from "../../images/normas_img/paginacao.png";
 import ImgPaginacao2 from "../../images/normas_img/paginacao2.png";
@@ -63,7 +63,7 @@ function NormasEFormatacao() {
         <p className="mb-4">
           Usa-se em palavras e expressões de outros idiomas.
         </p>
-        <ModalZoomImagem caminhoImagem={ImgItalico} />
+        <ModalZoomImagem caminhoImagem={ImgItalicoo} />
 
         <LinhaDivisoria />
 
