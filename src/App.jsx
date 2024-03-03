@@ -16,7 +16,7 @@ function App() {
       <Header />
       <div className=" flex">
         <SideMenu />
-        <BrowserRouter>
+        <BrowserRouter basename={"/"}>
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/gerar-referencias" element={<GerarReferencias/>} />
