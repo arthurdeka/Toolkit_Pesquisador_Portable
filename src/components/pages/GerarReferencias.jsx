@@ -448,18 +448,18 @@ function GerarReferencias() {
               {/* checkbox */}
               <fieldset className="flex flex-wrap w-full gap-4 text-white">
                 <div className="flex items-center gap-2 cursor-pointer">
-                  <div class="flex items-center">
+                  <div className="flex items-center">
                     <input
                       id="default-checkbox"
                       type="checkbox"
                       onChange={() => mudancaEscolhaCidade()}
-                      class="w-4 h-4 text-corterciaria border-white m-2 border-2 bg-gray-100  rounded   "
+                      className="w-4 h-4 text-corterciaria border-white m-2 border-2 bg-gray-100  rounded   "
                     />
 
                     <Tooltip content="Algumas revistas não disponibilizam a cidade de publicação. Caso seja seu caso, deixe essa opção desmarcada">
                       <label
                         htmlFor="default-checkbox"
-                        class="ms-2 text-sm font-medium text-white"
+                        className="ms-2 text-sm font-medium text-white"
                       >
                         Adicionar cidade de publicação da revista
                       </label>
