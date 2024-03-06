@@ -21,7 +21,10 @@ function SideMenu() {
         Funções:
       </h4>
       <div className="flex flex-col pl-2 pr-2 space-y-1">
-        <ButtonCustom desc="Gerar Referências (ABNT)" link="/gerar-referencias" />
+        <ButtonCustom
+          desc="Gerar Referências (ABNT)"
+          link="/gerar-referencias"
+        />
         <ButtonCustom
           desc="Contador de Palavras Repetidas"
           link="/contador-de-palavras"
@@ -29,6 +32,23 @@ function SideMenu() {
         <ButtonCustom desc="Normas & Formatações" link="/normas-e-formatacao" />
         <ButtonCustom desc="Downloads" link="/downloads" />
         <ButtonCustom desc="Sobre" link="/sobre" />
+      </div>
+      {/* card aviso! */}
+      <div class="max-w-sm m-6 rounded overflow-hidden shadow-md shadow-corprimaria">
+        <div class="px-2 lg:px-6 py-4">
+          <div class="font-bold text-md lg:text-xl text-corprimaria mb-2">
+            Contribua!
+          </div>
+          <p class="text-gray-700 text-sm lg:text-base">
+            Ajude a melhorar a Toolkit do Pesquisador, contribua com a aplicação
+            no GitHub!
+          </p>
+        </div>
+        <div class="pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold underline text-blue-700 mr-2 mb-2">
+            <a href="/downloads">Onde achar o repositório do GitHub?</a>
+          </span>
+        </div>
       </div>
     </div>
   );
@@ -64,6 +84,23 @@ function MobileMenu() {
           />
           <ButtonCustom desc="Downloads" link="/downloads" />
           <ButtonCustom desc="Sobre" link="/sobre" />
+          {/* card aviso! */}
+          <div class="w-full mt-8 m-6 rounded mx-auto overflow-hidden shadow-md border-2 border-corprimaria">
+            <div class="px-2 lg:px-6 py-4">
+              <div class="font-bold text-md lg:text-xl text-corprimaria mb-2">
+                Contribua!
+              </div>
+              <p class="text-gray-700 text-sm lg:text-base">
+                Ajude a melhorar a Toolkit do Pesquisador, contribua com a
+                aplicação no GitHub!
+              </p>
+            </div>
+            <div class="pt-4 pb-2">
+              <span class="inline-block bg-gray-200 ml-4 rounded-md px-3 py-1 text-sm font-semibold underline text-blue-700 mr-2 mb-2">
+                <a href="/downloads">Onde achar o repositório do GitHub?</a>
+              </span>
+            </div>
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <Button color="blue" onClick={() => setOpenModal(false)}>
