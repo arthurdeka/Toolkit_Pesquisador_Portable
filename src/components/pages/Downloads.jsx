@@ -11,9 +11,9 @@ function Downloads() {
       desc="Acesso às versões da Toolkit do pesquisador, acesso ao código fonte."
     >
       {/* eventualmente lembrar de adicionar: Função de gerador de texto descontinuada */}
-      <div className="w-6/12 mx-auto">
+      <div className="w-full lg:w-10/12 xl:w-6/12 mx-auto">
         {/* tabela */}
-        <h5 className="mb-2 text-center">
+        <h5 className="mb-2 text-center text-wrap">
           Versões e detalhes sobre a Toolkit do Pesquisador.
         </h5>
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -29,9 +29,9 @@ function Downloads() {
               <tr className="bg-white hover:bg-gray-50 ">
                 <th
                   scope="row"
-                  className="px-6 py-2 font-medium text-gray-900 whitespace-nowrap "
+                  className="px-6 py-2 font-medium text-gray-900 "
                 >
-                  Atualização de Interface - 1.2
+                  1.2 - Atualização de Interface
                 </th>
                 <td className="px-6 py-2">
                   Implementado tecnologia REACT & feita revisão de interface.
@@ -49,9 +49,9 @@ function Downloads() {
               <tr className="bg-white hover:bg-gray-50 ">
                 <th
                   scope="row"
-                  className="px-6 py-2 font-medium text-gray-900 whitespace-nowrap "
+                  className="px-6 py-2 font-medium text-gray-900 "
                 >
-                  Atualização para Web - 1.1
+                  1.1 - Atualização para Web
                 </th>
                 <td className="px-6 py-2">
                   Aplicação convertida de Python para uma versão hospedada na
@@ -70,9 +70,9 @@ function Downloads() {
               <tr className="bg-white hover:bg-gray-50 ">
                 <th
                   scope="row"
-                  className="px-6 py-2 font-medium text-gray-900 whitespace-nowrap "
+                  className="px-6 py-2 font-medium text-gray-900 "
                 >
-                  Versão Original - 1.0
+                  1.0 - Versão Original
                 </th>
                 <td className="px-6 py-2">
                   Pyhon necessário para a execução, leia o README para

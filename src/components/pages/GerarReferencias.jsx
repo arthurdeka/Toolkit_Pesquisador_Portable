@@ -95,7 +95,9 @@ function GerarReferencias() {
     let dataPublicacaoFinal = processamentoDataPublicacao();
     let cidadeFinal = processamentoCidadeAcesso();
     let tipoAcessoFinal = processamentoTipoAcesso();
-    scrollToTop()
+
+    /* efeito de rolagem da tela é aplicado somente se a tela for maior do que tamanho lg */
+    window.matchMedia('(min-width: 992px)').matches && scrollToTop();
 
     let resultadoFinal = `${resultadoNomesFinal}. ${tituloArtigo}. <b>${tituloRevista}</b>, ${cidadeFinal}v. ${volumeExemplar}, n. ${numeroExemplar}, p. ${paginasInicialFinal}, ${dataPublicacaoFinal} ${tipoAcessoFinal}`;
     setLista([...lista, resultadoFinal]);
@@ -114,9 +116,9 @@ function GerarReferencias() {
       titulo="Gerador de Referências"
       desc="Preencha os dados para gerar uma referência nas normas da Associação Brasileira de Normas Técnicas sobre determinada obra."
     >
-      <div className="flex gap-x-16 font-inter">
+      <div className="flex flex-col lg:flex-row gap-x-16 font-inter">
         {/* entrada */}
-        <div className="w-6/12 ">
+        <div className="w-full lg:w-6/12 ">
           <div className="p-4 text-white rounded-md font-inter bg-gradient-to-r from-corsecundaria to-corprimaria">
             <h5 className="inline-block pb-3 pr-2 font-semibold text-md">
               Quantidade de autores:
@@ -598,7 +600,7 @@ function GerarReferencias() {
         </div>
 
         {/* saída */}
-        <div className="w-6/12">
+        <div className="w-full lg:w-6/12">
 
           <Tooltip content='Nomes da revista de publicação aparecerão em negrito, campos não preenchidos aparecerão como "undefined" ou "null"'>
           <h2 className="text-2xl text-center font-semibold font-inter inline-block mb-2 ml-4">
@@ -620,7 +622,7 @@ function GerarReferencias() {
                   />
                 </svg>
               </Tooltip>
-          <div className="rounded-md border-2 border-corprimaria border-opacity-45 p-4 flex flex-col-reverse">
+          <div className="rounded-md break-words border-2 border-corprimaria border-opacity-45 p-4 flex flex-col-reverse">
             <p className="font-inter text-sm mb-3">
               SOUSA, Árlen. <i>et al</i>. Qualidade de vida e incapacidade funcional
               entre idosos cadastrados na estratégia de saúde da família. <b>ABCS

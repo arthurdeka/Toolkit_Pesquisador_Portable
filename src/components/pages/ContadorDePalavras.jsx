@@ -115,8 +115,8 @@ function ContadorDePalavras() {
       titulo="Contador de Palavras"
       desc="Faz a contagem de caraceres, palavras, e quantas vezes cada palavra foi utilizada. Também calcula o tempo médio de leitura do texto."
     >
-      <div className="flex gap-x-16">
-        <div className="w-5/12 " id="entrada">
+      <div className="flex flex-col md:flex-row gap-x-16">
+        <div className="w-full md:w-5/12 " id="entrada">
           <span>Insira abaixo o texto:</span>
           <br />
           <textarea

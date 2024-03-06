@@ -11,7 +11,7 @@ function Sobre() {
       desc="Créditos e mais informações sobre a Toolkit do Pesquisador."
     >
       <div className="flex flex-col w-10/12 items-center mx-auto">
-        <h5 className="w-6/12 text-center">
+        <h5 className="w-full md:w-6/12 text-center">
           A <b className="text-corprimaria">Toolkit do Pesquisador</b> é um
           programa desenvolvido com o intuito de auxiliar pesquisadores
           iniciantes no processo de criação de artigos científicos. O programa
