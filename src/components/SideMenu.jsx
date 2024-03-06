@@ -39,7 +39,7 @@ function MobileMenu() {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div className="flex flex-col bg-corprimaria text-center w-full md:hidden py-1 border border-corprimaria">
+    <div className="flex flex-col bg-gradient-to-b from-corprimaria to-corsecundaria text-center w-full md:hidden py-1 border border-corprimaria">
       <Button
         className="m-1 self-center w-6/12 text-xs enabled:hover:bg-gray-200 bg-white text-corprimaria"
         onClick={() => setOpenModal(true)}

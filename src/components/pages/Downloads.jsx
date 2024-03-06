@@ -36,13 +36,13 @@ function Downloads() {
                 <td className="px-6 py-2">
                   Implementado tecnologia REACT & feita revisão de interface.
                 </td>
-                <td className="px-6 py-2">
+                <td className="px-6 py-2 text-center">
                   <a
                     target="_blank"
                     className="inline-block font-semibold text-center border-b-2 border-corprimaria text-corprimaria"
                     href="https://github.com/arthurdeka/Toolkit_Pesquisador_Portable"
                   >
-                    Google Drive
+                    Github
                   </a>
                 </td>
               </tr>
